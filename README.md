@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# My Reports
+
+Sample react project create as an interview assignment.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
