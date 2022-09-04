@@ -2,6 +2,12 @@
 
 Sample react project create as an interview assignment.
 
+TODO: loading state, tests, overall code cleaning (App.js component should be split, perhaps add some optimizations). Bonus: reponsive design.
+
+Uses mock API to load data.
+
+[Design - Figma](https://www.figma.com/file/t00BR74ObZibDzdMquHcGk/Test).
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
