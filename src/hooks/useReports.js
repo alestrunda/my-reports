@@ -3,10 +3,11 @@ import mainApi from "../apis/mainApi";
 
 const useReports = () => {
   const [reports, setProjects] = useState([]);
-  const [isLoading, setLoading] = useState(true);
+  const [isLoading, setLoading] = useState(false);
   const [error, setError] = useState();
 
   const loadReports = (filters) => {
+    setLoading(true);
     mainApi
       .getReports(filters)
       .then((response) => response.json())
