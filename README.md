@@ -1,10 +1,10 @@
 # My Reports
 
-Sample react project create as an interview assignment.
+Sample react project created as an interview assignment.
 
-TODO: a bit of code cleaning (App.js component should be split, perhaps add some optimizations). Bonus: reponsive design.
+TODO: improve test coverage, a bit of code cleaning (App.js component should be split, perhaps add some optimizations). Bonus: reponsive design.
 
-Uses mock API to load data.
+Uses mocked API to load data.
 
 [Design - Figma](https://www.figma.com/file/t00BR74ObZibDzdMquHcGk/Test).
 
