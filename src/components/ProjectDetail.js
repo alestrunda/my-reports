@@ -15,10 +15,16 @@ const ProjectDetail = ({ projectName, reports, skipColumns }) => {
 
   return (
     <>
-      <button className="box-white" onClick={toggleRecords}>
+      <button
+        className="box-white"
+        onClick={toggleRecords}
+        data-testid="project-head"
+      >
         <div className="row-edges">
           <p>{projectName}</p>
-          <p className="text-uppercase">Total: {formatNumber(total)} USD</p>
+          <p className="text-uppercase">
+            Total: <span data-testid="total">{formatNumber(total)}</span> USD
+          </p>
         </div>
       </button>
       {showReports && (

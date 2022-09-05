@@ -2,7 +2,7 @@
 
 Sample react project create as an interview assignment.
 
-TODO: loading state, tests, overall code cleaning (App.js component should be split, perhaps add some optimizations). Bonus: reponsive design.
+TODO: a bit of code cleaning (App.js component should be split, perhaps add some optimizations). Bonus: reponsive design.
 
 Uses mock API to load data.
 
