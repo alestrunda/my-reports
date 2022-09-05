@@ -21,12 +21,26 @@ import { formatNumber } from "./helpers";
 import "./App.css";
 
 const App = () => {
-  const { error: reportsError, reports, loadReports } = useReports();
-  const { error: projectsError, projects } = useProjects();
-  const { error: gatewaysError, gateways } = useGateways();
+  const {
+    error: reportsError,
+    isLoading: isLoadingReports,
+    reports,
+    loadReports,
+  } = useReports();
+  const {
+    error: projectsError,
+    isLoading: isLoadingProjects,
+    projects,
+  } = useProjects();
+  const {
+    error: gatewaysError,
+    isLoading: isLoadingGateways,
+    gateways,
+  } = useGateways();
   const [activeFilters, setActiveFilters] = useState({});
 
   const error = reportsError || projectsError || gatewaysError;
+  const isLoading = isLoadingReports || isLoadingProjects || isLoadingGateways;
 
   const generateReports = (filters) => {
     setActiveFilters(filters);
@@ -103,11 +117,17 @@ const App = () => {
           </div>
           {!reports.length ? (
             <div className="page-content__content page-content__content--center">
-              {error ? (
+              {error && (
                 <div className="container-small text-center">
                   <h2>Data cannot be loaded</h2>
                 </div>
-              ) : (
+              )}
+              {isLoading && (
+                <div className="container-small text-center">
+                  <h2>Loading...</h2>
+                </div>
+              )}
+              {!error && !isLoading && (
                 <div className="container-small text-center">
                   <h2>No reports</h2>
                   <p className="mb50">
